@@ -1,5 +1,5 @@
 # Authors
-This watered down script is based on Raghvendra Papagari's submission scripts
+This watered down script is based on Raghavendra Reddy Pappagari's submission scripts
 
 # Usage
 `submit_grid.sh <YOUR_PYTHON_SCRIPT>`
