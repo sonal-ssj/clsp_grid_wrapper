@@ -9,10 +9,13 @@ For example, to submit a python script called `test_pytorch.py` to the grid, run
 This will activate the virtual environment as in `pytorch_run.sh` and run a script to check if gpu is being used with pytorch.
 
 # Files and description 
+```
 .
 ├── `submit_grid.sh` : Script to submit a python script to the grid
 ├── `pytorch_run.sh` : Sample script that activates virtual environment with pytorch and gets CUDA stuff
 └── `test_pytorch.py` : Sample script to check if pytorch is installed and uses GPU
+
+```
 
 Optional: You can have multiple scripts like
 `tensorflow_run.sh` : Script that activates virtual environment with tensorflow and gets CUDA stuff
