@@ -21,8 +21,10 @@ You can have muliple scripts like
 3) Run `submit_grid.sh test_pytorch.py`
 4) You should get output like follows in `*.out` file.
 
-    ```Pytorch available?
+    ```
+    Pytorch available?
     True
     Cuda available?
     True
-    Success!```
+    Success!
+    ```
