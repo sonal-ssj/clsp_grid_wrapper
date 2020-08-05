@@ -23,7 +23,8 @@ Optional: You can have multiple scripts like
 
 # Sanity check run
 0) Make sure your python and conda path is set in `~/.bashrc`. Run 
-    ```source ~/.bashrc
+    ```
+    source ~/.bashrc
     which python
     which conda
     ```
