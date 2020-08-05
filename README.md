@@ -22,7 +22,12 @@ Optional: You can have multiple scripts like
 `keras_run.sh` : Script that activates virtual environment with keras and gets CUDA stuff
 
 # Sanity check run
-0) Make sure your python and conda path is set in `~/.bashrc`
+0) Make sure your python and conda path is set in `~/.bashrc`. Run 
+    ```source ~/.bashrc
+    which python
+    which conda
+    ```
+    This should give the python and conda path you desire to use
 1) Edit the name of your virtual environment which has pytorch in `pytorch_run.sh`
 2) Edit `submit_grid.sh` to change the names of log and output files, else by default they will be named by using TIMESTAMP
 3) Run `submit_grid.sh test_pytorch.py`
