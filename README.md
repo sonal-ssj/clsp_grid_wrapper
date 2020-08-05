@@ -29,8 +29,19 @@ Optional: You can have multiple scripts like
     which conda
     ```
     This should give the python and conda path you desire to use
-1) Edit the name of your virtual environment which has pytorch in `pytorch_run.sh`
-2) Edit `submit_grid.sh` to change the names of log and output files, else by default they will be named by using TIMESTAMP
+1) Edit the name of your virtual environment which has pytorch in `pytorch_run.sh`. This can be done by replacing `<YOUR_ENV_NAME>` in line 2 of `pytorch_run.sh` by something like `my_env`. Now, the `pytorch_run.sh` file must read like
+    ```
+    # Activate your virtual environment
+    conda activate my_env
+
+    CUDA_VISIBLE_DEVICES=`/home/gkumar/scripts/free-gpu` python  "$@"
+    ```
+
+2) Edit `submit_grid.sh` to change the names of log and output files, else by default they will be named by using TIMESTAMP. You may also have to change memory requirements in line 26 (`mem_free`, `ram_free`)as per your script's requirement.
+    ```
+    # qsub command, you can edit the memory requirements
+    export qsub_cmd="qsub -cwd -l mem_free=8G,ram_free=8G,gpu=1,hostname=b1[123456789]|c* -q g.q"
+    ```
 3) Run `submit_grid.sh test_pytorch.py`
 4) You should get output like follows in `*.out` file.
 
