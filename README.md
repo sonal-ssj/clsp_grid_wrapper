@@ -42,8 +42,12 @@ Optional: You can have multiple scripts like
     # qsub command, you can edit the memory requirements
     export qsub_cmd="qsub -cwd -l mem_free=8G,ram_free=8G,gpu=1,hostname=b1[123456789]|c* -q g.q"
     ```
-3) Run `submit_grid.sh test_pytorch.py`
-4) You should get output like follows in `*.out` file.
+3) Give execute permission to `submit_grid.sh ` by running:
+    ```
+    chmod +x submit_grid.sh 
+    ```
+4) Run `submit_grid.sh test_pytorch.py`
+5) You should get output like follows in `*.out` file.
 
     ```
     Pytorch available?
